@@ -120,8 +120,7 @@ public class TriggeredEvent : MonoBehaviour
 
 	private void AnimationTriggered()
 	{
-		//anim.SetTrigger("Wave");
-		anim.Play("Wave");
+		anim.SetTrigger(animTrigger);
 
 		if (disableEventOnUse)
 			DisableOnUse();
@@ -142,6 +141,7 @@ public class TriggeredEvent : MonoBehaviour
 				break;
 			case AudioType.Randomized:
 				// TODO: Randomize audioClip selection, volume and pitch
+                // TODO: Display audioClip list and volume/pitch ranges in editor
 				aSource.volume = audioVolume / 100;
 				aSource.pitch = audioPitch;
 				aSource.PlayOneShot(audioClips[0]);

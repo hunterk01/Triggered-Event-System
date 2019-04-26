@@ -112,6 +112,36 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &4969161
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4969162}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4969162
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4969161}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 406757816}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &170076733
 GameObject:
   m_ObjectHideFlags: 0
@@ -208,10 +238,10 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 383027975}
   - {fileID: 406757816}
   - {fileID: 1937399834}
   - {fileID: 1862128932}
-  - {fileID: 383027975}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -290,8 +320,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 282840810}
-  m_LocalRotation: {x: -0.32241073, y: 0.053062826, z: -0.018105365, w: -0.94493806}
-  m_LocalPosition: {x: -4.946071, y: 10.743172, z: -7.2751174}
+  m_LocalRotation: {x: -0.44962883, y: 0.057542212, z: -0.029041385, w: -0.8908869}
+  m_LocalPosition: {x: -5.8086386, y: 14.147345, z: -4.0522575}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -311,7 +341,7 @@ GameObject:
   - component: {fileID: 383027972}
   - component: {fileID: 383027971}
   m_Layer: 0
-  m_Name: Block04
+  m_Name: BlockToDisable
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -403,7 +433,7 @@ Transform:
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 234547580}
-  m_RootOrder: 3
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 90.728004, z: 0}
 --- !u!1 &406757811
 GameObject:
@@ -419,7 +449,7 @@ GameObject:
   - component: {fileID: 406757813}
   - component: {fileID: 406757812}
   m_Layer: 0
-  m_Name: Block01
+  m_Name: FallingBlock
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -509,9 +539,10 @@ Transform:
   m_LocalRotation: {x: -0, y: 0.7115869, z: -0, w: 0.70259815}
   m_LocalPosition: {x: -14.93, y: 5.43, z: 9.17}
   m_LocalScale: {x: 0.7000002, y: 0.7, z: 0.7000002}
-  m_Children: []
+  m_Children:
+  - {fileID: 4969162}
   m_Father: {fileID: 234547580}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 90.728004, z: 0}
 --- !u!1 &539957170
 GameObject:
@@ -541,12 +572,11 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 630646096}
+  - {fileID: 1817609752}
   - {fileID: 1284258862}
   - {fileID: 909629165}
   - {fileID: 1047181498}
   - {fileID: 1976371944}
-  - {fileID: 1570927971}
-  - {fileID: 1817609752}
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 90.728004, z: 0}
@@ -566,9 +596,8 @@ GameObject:
   - component: {fileID: 630646099}
   - component: {fileID: 630646093}
   - component: {fileID: 630646092}
-  - component: {fileID: 630646100}
   m_Layer: 0
-  m_Name: CubeTrigger1
+  m_Name: TriggerNPC
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -600,7 +629,7 @@ MonoBehaviour:
   audioClips: []
   clipCount: 1
   audioVolume: 25
-  audioPitch: 1.25
+  audioPitch: 1.15
   audioVolumeMin: 0
   audioVolumeMax: 100
   audioPitchMin: 0
@@ -645,7 +674,7 @@ MonoBehaviour:
   audioClip: {fileID: 0}
   audioClips: []
   clipCount: 1
-  audioVolume: 100
+  audioVolume: 0
   audioPitch: 1
   audioVolumeMin: 0
   audioVolumeMax: 100
@@ -850,52 +879,6 @@ MonoBehaviour:
   triggerActivated: 0
   triggeredByPlayer: 1
   triggeredByObject: {fileID: 0}
---- !u!114 &630646100
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 630646091}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4de784cab46bf214ea16c54eb0f640fd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  TriggeredByPlayer: 1
-  triggeredByObject: {fileID: 0}
-  disableEventOnUse: 1
-  eventType: 4
-  willActivate: 1
-  activationObject: {fileID: 0}
-  activationDelay: 0
-  anim: {fileID: 0}
-  animTrigger: 
-  audioType: 1
-  audioClip: {fileID: 0}
-  audioClips: []
-  clipCount: 1
-  audioVolume: 0
-  audioPitch: 1
-  audioVolumeMin: 0
-  audioVolumeMax: 100
-  audioPitchMin: 0
-  audioPitchMax: 2
-  musicClip: {fileID: 0}
-  loopMusic: 0
-  fadeMin: 0
-  fadeMax: 5
-  musicFadeInTime: 1.84
-  musicFadeOutTime: 0.92
-  musicVolume: 100
-  musicPitch: 1
-  musicVolumeMin: 0
-  musicVolumeMax: 100
-  musicPitchMin: 0
-  musicPitchMax: 2
-  DestructableObject: {fileID: 0}
-  DestructionDelay: 0
-  particle: {fileID: 0}
 --- !u!1 &909629164
 GameObject:
   m_ObjectHideFlags: 0
@@ -914,7 +897,7 @@ GameObject:
   - component: {fileID: 909629166}
   - component: {fileID: 909629171}
   m_Layer: 0
-  m_Name: CubeTrigger3
+  m_Name: TriggerVFX_SFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -932,7 +915,7 @@ Transform:
   m_LocalScale: {x: 2, y: 1, z: 2}
   m_Children: []
   m_Father: {fileID: 539957171}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &909629166
 MonoBehaviour:
@@ -1242,6 +1225,36 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!1 &945659104
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 945659105}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &945659105
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 945659104}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1862128932}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1047181497
 GameObject:
   m_ObjectHideFlags: 0
@@ -1260,7 +1273,7 @@ GameObject:
   - component: {fileID: 1047181504}
   - component: {fileID: 1047181505}
   m_Layer: 0
-  m_Name: CubeTrigger4
+  m_Name: TriggerVFX_SFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1278,7 +1291,7 @@ Transform:
   m_LocalScale: {x: 2, y: 1, z: 2}
   m_Children: []
   m_Father: {fileID: 539957171}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1047181499
 MonoBehaviour:
@@ -1305,8 +1318,8 @@ MonoBehaviour:
   audioClip: {fileID: 8300000, guid: ecc1bac7aa3e3f14b80fcdaabd666001, type: 3}
   audioClips: []
   clipCount: 1
-  audioVolume: 50
-  audioPitch: 1
+  audioVolume: 25
+  audioPitch: 1.5
   audioVolumeMin: 0
   audioVolumeMax: 100
   audioPitchMin: 0
@@ -1743,7 +1756,7 @@ GameObject:
   - component: {fileID: 1284258857}
   - component: {fileID: 1284258863}
   m_Layer: 0
-  m_Name: CubeTrigger2
+  m_Name: TriggerMutipleObjects
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1911,7 +1924,7 @@ Transform:
   m_LocalScale: {x: 2, y: 1, z: 2}
   m_Children: []
   m_Father: {fileID: 539957171}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1284258863
 MonoBehaviour:
@@ -2076,7 +2089,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1421572805}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.7, z: 0}
+  m_LocalPosition: {x: -1.92, y: 0.7, z: 1.21}
   m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2106,6 +2119,36 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1421572805}
   m_Enabled: 1
+--- !u!1 &1502499029
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1502499030}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1502499030
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1502499029}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1937399834}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1523270912
 GameObject:
   m_ObjectHideFlags: 0
@@ -2193,149 +2236,11 @@ Transform:
   m_GameObject: {fileID: 1523270912}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 5, y: 1, z: 5}
+  m_LocalScale: {x: 10, y: 1, z: 10}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1570927970
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1570927971}
-  - component: {fileID: 1570927975}
-  - component: {fileID: 1570927974}
-  - component: {fileID: 1570927973}
-  - component: {fileID: 1570927972}
-  m_Layer: 0
-  m_Name: CubeTrigger6
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &1570927971
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1570927970}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -12.45, y: 0.5, z: -6.83}
-  m_LocalScale: {x: 2, y: 1, z: 2}
-  m_Children: []
-  m_Father: {fileID: 539957171}
-  m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1570927972
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1570927970}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4de784cab46bf214ea16c54eb0f640fd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  TriggeredByPlayer: 1
-  triggeredByObject: {fileID: 0}
-  disableEventOnUse: 1
-  eventType: 0
-  willActivate: 0
-  activationObject: {fileID: 383027970}
-  activationDelay: 0.5
-  anim: {fileID: 0}
-  animTrigger: 
-  audioType: 0
-  audioClip: {fileID: 0}
-  audioClips: []
-  clipCount: 1
-  audioVolume: 100
-  audioPitch: 1
-  audioVolumeMin: 0
-  audioVolumeMax: 100
-  audioPitchMin: 0
-  audioPitchMax: 2
-  musicClip: {fileID: 0}
-  loopMusic: 0
-  fadeMin: 0
-  fadeMax: 5
-  musicFadeInTime: 0
-  musicFadeOutTime: 0
-  musicVolume: 100
-  musicPitch: 1
-  musicVolumeMin: 0
-  musicVolumeMax: 100
-  musicPitchMin: 0
-  musicPitchMax: 2
-  DestructableObject: {fileID: 0}
-  DestructionDelay: 0
-  particle: {fileID: 198000012942003240, guid: ecdd96beb7f93494880c052dfccf9dc1, type: 3}
---- !u!23 &1570927973
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1570927970}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RenderingLayerMask: 4294967295
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: 9b61e3c7b85924a49be4698eac98fb45, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 0
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
---- !u!65 &1570927974
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1570927970}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!33 &1570927975
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1570927970}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1001 &1640189799
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2415,7 +2320,7 @@ GameObject:
   - component: {fileID: 1817609757}
   - component: {fileID: 1817609753}
   m_Layer: 0
-  m_Name: SphereTrigger
+  m_Name: TriggerDisableCube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2433,7 +2338,7 @@ Transform:
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 539957171}
-  m_RootOrder: 6
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1817609753
 MonoBehaviour:
@@ -2569,7 +2474,7 @@ GameObject:
   - component: {fileID: 1862128929}
   - component: {fileID: 1862128928}
   m_Layer: 0
-  m_Name: Block03
+  m_Name: FallingBlock
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2659,9 +2564,10 @@ Transform:
   m_LocalRotation: {x: -0, y: 0.7115869, z: -0, w: 0.70259815}
   m_LocalPosition: {x: -15.03554, y: 5.43, z: 0.8706708}
   m_LocalScale: {x: 0.7000002, y: 0.7, z: 0.7000002}
-  m_Children: []
+  m_Children:
+  - {fileID: 945659105}
   m_Father: {fileID: 234547580}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 90.728004, z: 0}
 --- !u!1 &1937399829
 GameObject:
@@ -2677,7 +2583,7 @@ GameObject:
   - component: {fileID: 1937399831}
   - component: {fileID: 1937399830}
   m_Layer: 0
-  m_Name: Block02
+  m_Name: FallingBlock
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2767,9 +2673,10 @@ Transform:
   m_LocalRotation: {x: -0, y: 0.7115869, z: -0, w: 0.70259815}
   m_LocalPosition: {x: -14.9844265, y: 5.43, z: 4.8903475}
   m_LocalScale: {x: 0.7000002, y: 0.7, z: 0.7000002}
-  m_Children: []
+  m_Children:
+  - {fileID: 1502499030}
   m_Father: {fileID: 234547580}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 90.728004, z: 0}
 --- !u!1 &1976371943
 GameObject:
@@ -2789,7 +2696,7 @@ GameObject:
   - component: {fileID: 1976371950}
   - component: {fileID: 1976371951}
   m_Layer: 0
-  m_Name: CubeTrigger5
+  m_Name: TriggerVFX_SFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2807,7 +2714,7 @@ Transform:
   m_LocalScale: {x: 2, y: 1, z: 2}
   m_Children: []
   m_Father: {fileID: 539957171}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1976371945
 MonoBehaviour:
@@ -2835,7 +2742,7 @@ MonoBehaviour:
   audioClips: []
   clipCount: 1
   audioVolume: 60
-  audioPitch: 1
+  audioPitch: 0.5
   audioVolumeMin: 0
   audioVolumeMax: 100
   audioPitchMin: 0
